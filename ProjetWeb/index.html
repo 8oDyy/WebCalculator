@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+
+    <div class="mode-toggle position-absolute top-0 end-0 p-3">
+        <label class="switch">
+            <input type="checkbox" id="toggle-darkmode">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="d-flex">
+        <!-- Section Historique -->
+        <div class="history bg-light p-3 rounded shadow me-3">
+            <h4>Historique</h4>
+            <ul id="history-list" class="list-unstyled"></ul>
+        </div>
+
+        <!-- Calculatrice -->
+        <div class="calculator bg-black p-3 rounded shadow">
+            <!-- Écran -->
+            <div class="screen bg-secondary text-end text-white p-3 rounded mb-2">
+                <span id="output">0</span>
+            </div>
+            <!-- Boutons -->
+            <div class="buttons row g-2">
+                <!-- Première rangée -->
+                <div class="col-3"><button class="btn btn-light w-100 operator" data-value="π">π</button></div>
+                <div class="col-3"><button class="btn btn-light w-100 operator" data-value="²">²</button></div>
+                <div class="col-3"><button class="btn btn-light w-100 operator" data-value="√">√</button></div>
+                <div class="col-3"><button class="btn btn-danger w-100" data-value="ON/C">ON/C</button></div>
+
+                <!-- Rangée des nombres -->
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="7">7</button></div>
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="8">8</button></div>
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="9">9</button></div>
+                <div class="col-3"><button class="btn btn-light w-100 operator" data-value="%">%</button></div>
+
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="4">4</button></div>
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="5">5</button></div>
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="6">6</button></div>
+                <div class="col-3"><button class="btn btn-light w-100 operator" data-value="*">&times;</button></div>
+
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="1">1</button></div>
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="2">2</button></div>
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="3">3</button></div>
+                <div class="col-3"><button class="btn btn-light w-100 operator" data-value="/">÷</button></div>
+
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value=".">.</button></div>
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="0">0</button></div>
+                <div class="col-3"><button class="btn btn-secondary w-100" data-value="+/-">+/-</button></div>
+                <div class="col-3"><button class="btn btn-light w-100 operator" data-value="+">+</button></div>
+
+                <div class="col-12"><button class="btn btn-success w-100 egal" data-value="=">=</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
